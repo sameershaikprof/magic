@@ -40,6 +40,11 @@ socket.on("connect", function(){
   socket.on("updateState", function(state){
     console.log("The new state is: " + state);
     gpio.write(config.led, !state);
+    socket.emit('temp',{
+    
+    temperature:readout.temperature.toFixed(2)
+    
+    });
   });
 })
 
