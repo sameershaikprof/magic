@@ -44,5 +44,5 @@ socket.on("connect", function(){
 })
 
 
-var sensorLib = require('node-dht-sensor');
+
  
